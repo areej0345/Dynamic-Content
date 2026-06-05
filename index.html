@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorldScope — Country Explorer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="wrapper">
+  <header>
+    <div class="badge">REST Countries API</div>
+    <h1>World<span>Scope</span></h1>
+    <p class="subtitle">Explore all nations — populations, regions & more</p>
+  </header>
+
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search" placeholder="Search by name, region or capital…" autocomplete="off" spellcheck="false">
+    <button id="clear-btn" title="Clear search">✕</button>
+  </div>
+
+  <div id="stats-bar"></div>
+  <div id="spinner"><div class="spin-ring"></div><span class="spin-label">Fetching countries…</span></div>
+  <div id="error-box">
+    <div class="error-icon">🌐</div>
+    <div class="error-title">Couldn't load countries</div>
+    <p class="error-msg">Something went wrong while reaching the REST Countries API.<br>Check your connection and try again.</p>
+    <button id="retry-btn">Try again</button>
+  </div>
+  <div id="empty-state"><div class="emoji">🔎</div><p>No countries found for <span id="search-term-label"></span></p></div>
+  <div id="countries-grid"></div>
+  <div class="load-more-wrap">
+    <button id="load-more-btn" style="display:none">Load more</button>
+  </div>
+
+  <footer>Data from <strong>restcountries.com</strong> · Task 02 — Dynamic Content with JavaScript</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
