@@ -70,8 +70,3 @@ GET https://restcountries.com/v3.1/all
 Returns an array of country objects with fields like `name`, `population`, `region`, `flags`, and more.
 
 ---
-
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
